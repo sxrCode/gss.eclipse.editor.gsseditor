@@ -1,3 +1,0 @@
-https://github.com/eclipse/gef/wiki#developer-documentation GEF4文档资料
-http://help.eclipse.org/mars/index.jsp?topic=%2Forg.eclipse.gef.doc.isv%2Fguide%2Fguide.html GEF文档资料
-https://github.com/eclipse/gef-legacy  gef-legacy

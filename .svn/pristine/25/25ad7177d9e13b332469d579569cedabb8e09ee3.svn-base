@@ -1,0 +1,159 @@
+package editorexample.editor;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.ui.IEditorInput;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IEditorSite;
+import org.eclipse.ui.IPropertyListener;
+import org.eclipse.ui.IWorkbenchPartSite;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.part.EditorPart;
+import org.eclipse.ui.texteditor.IDocumentProvider;
+
+public class EditorTest implements IEditorPart {
+
+	@Override
+	public void addPropertyListener(IPropertyListener listener) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void createPartControl(Composite parent) {
+
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public IWorkbenchPartSite getSite() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getTitle() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Image getTitleImage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getTitleToolTip() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void removePropertyListener(IPropertyListener listener) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setFocus() {
+
+	}
+
+	@Override
+	public <T> T getAdapter(Class<T> adapter) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void doSave(IProgressMonitor monitor) {
+	}
+
+	@Override
+	public void doSaveAs() {
+
+	}
+
+	@Override
+	public boolean isDirty() {
+		return false;
+	}
+
+	@Override
+	public boolean isSaveAsAllowed() {
+		
+		return false;
+	}
+
+	@Override
+	public boolean isSaveOnCloseNeeded() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public IEditorInput getEditorInput() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IEditorSite getEditorSite() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void init(IEditorSite site, IEditorInput input) throws PartInitException {
+
+	}
+
+	private class editorOne extends EditorPart {
+
+		@Override
+		public void doSave(IProgressMonitor monitor) {
+			//inherit
+		}
+
+		@Override
+		public void doSaveAs() {
+			//inherit
+		}
+
+		@Override
+		public void init(IEditorSite site, IEditorInput input) throws PartInitException {
+			//inherit
+		}
+
+		@Override
+		public boolean isDirty() {
+			//inherit
+			return false;
+		}
+
+		@Override
+		public boolean isSaveAsAllowed() {
+			//inherit
+			return false;
+		}
+
+		@Override
+		public void createPartControl(Composite parent) {
+			// inherit
+
+		}
+
+		@Override
+		public void setFocus() {
+			//inherit
+
+		}
+	}
+}
