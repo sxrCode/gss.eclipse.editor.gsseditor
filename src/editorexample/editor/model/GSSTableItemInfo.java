@@ -1,4 +1,4 @@
-package editorexample.model;
+package editorexample.editor.model;
 
 public class GSSTableItemInfo {
 

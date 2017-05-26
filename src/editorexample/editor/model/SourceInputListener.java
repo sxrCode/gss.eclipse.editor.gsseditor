@@ -1,4 +1,4 @@
-package editorexample.editor;
+package editorexample.editor.model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package editorexample.editor;
+package editorexample.editor.model;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,9 +13,7 @@ import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.texteditor.IDocumentProvider;
 import org.eclipse.ui.texteditor.IElementStateListener;
 
-import editorexample.model.GSSTableColumnInfo;
-import editorexample.model.GSSTableInfo;
-import editorexample.parser.GSSTableXMLParser;
+import editorexample.editor.parser.GSSTableXMLParser;
 
 public class TableInputContext {
 

@@ -1,4 +1,4 @@
-package editorexample.editor;
+package editorexample.editor.view;
 
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.source.SourceViewer;

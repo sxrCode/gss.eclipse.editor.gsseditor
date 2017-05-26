@@ -1,4 +1,4 @@
-package editorexample.parser;
+package editorexample.editor.parser;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -7,9 +7,9 @@ import org.eclipse.jface.text.BadLocationException;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.IRegion;
 
-import editorexample.model.GSSTableColumnInfo;
-import editorexample.model.GSSTableInfo;
-import editorexample.model.GSSTableItemInfo;
+import editorexample.editor.model.GSSTableColumnInfo;
+import editorexample.editor.model.GSSTableInfo;
+import editorexample.editor.model.GSSTableItemInfo;
 
 public class GSSTableXMLParser {
 

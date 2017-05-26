@@ -1,4 +1,4 @@
-package editorexample.model;
+package editorexample.editor.model;
 
 import java.util.HashMap;
 import java.util.Map;

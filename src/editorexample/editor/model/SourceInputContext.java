@@ -1,4 +1,4 @@
-package editorexample.editor;
+package editorexample.editor.model;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,6 +18,8 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.texteditor.IDocumentProvider;
 import org.eclipse.ui.texteditor.IElementStateListener;
+
+import editorexample.editor.GSSDBEditor;
 
 public class SourceInputContext {
 

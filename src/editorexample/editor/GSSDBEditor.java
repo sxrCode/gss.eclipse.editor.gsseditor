@@ -10,6 +10,12 @@ import org.eclipse.ui.editors.text.TextFileDocumentProvider;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.texteditor.IDocumentProvider;
 
+import editorexample.editor.ctrl.GSSTableFormController;
+import editorexample.editor.model.InputContextManager;
+import editorexample.editor.model.SourceInputContext;
+import editorexample.editor.view.GSSSourceFormPage;
+import editorexample.editor.view.GSSTableFormPage;
+
 public class GSSDBEditor extends FormEditor {
 
 	private GSSSourceFormPage sourceFormPage;
@@ -23,6 +29,8 @@ public class GSSDBEditor extends FormEditor {
 	private boolean dirtyState = false;
 
 	private IDocument gssdbDocument;
+
+	private GSSTableFormController controllerDelegate;
 
 	@Override
 	public void init(IEditorSite site, IEditorInput input) throws PartInitException {
@@ -90,6 +98,8 @@ public class GSSDBEditor extends FormEditor {
 		try {
 			addPage(createSourcePage());
 			addPage(createTableFormPage());
+			controllerDelegate = new GSSTableFormController(tableFormPage, manager);
+			controllerDelegate.manage();
 		} catch (PartInitException e) {
 			e.printStackTrace();
 		}
@@ -103,8 +113,6 @@ public class GSSDBEditor extends FormEditor {
 
 	private GSSTableFormPage createTableFormPage() {
 		tableFormPage = new GSSTableFormPage(this, "gssdb_atble_page", "table");
-		manager.addInputContextManagerListener(tableFormPage);
-		tableFormPage.setContextManager(manager);
 		return tableFormPage;
 	}
 

@@ -1,6 +1,4 @@
-package editorexample.editor;
-
-import editorexample.model.GSSTableInfo;
+package editorexample.editor.model;
 
 public interface TableInputContextListener {
 

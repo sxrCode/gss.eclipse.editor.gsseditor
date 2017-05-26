@@ -1,4 +1,4 @@
-package editorexample.editor;
+package editorexample.editor.model;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -19,6 +19,15 @@ public class InputContextManager implements SourceInputListener {
 	@Override
 	public void addTableInputContext(TableInputContext inputContext) {
 		tableInputContexts.add(inputContext);
+		inputContext.addTableInputContextListener(new TableInputContextListener() {
+
+			@Override
+			public void listenModelChanged(GSSTableInfo model) {
+				for (InputContextManagerListener listener : listeners) {
+					listener.listeneTableChange(inputContext);
+				}
+			}
+		});
 	}
 
 	public void addInputContextManagerListener(InputContextManagerListener listener) {
@@ -34,13 +43,13 @@ public class InputContextManager implements SourceInputListener {
 	@Override
 	public void changeContexts(List<TableInputContext> tableInputContexts) {
 		this.tableInputContexts = tableInputContexts;
-		for(InputContextManagerListener listener : listeners) {
+		for (InputContextManagerListener listener : listeners) {
 			listener.listenerManagerChange(this);
 		}
 	}
-	
+
 	public void saveAll(IProgressMonitor monitor) throws CoreException {
-		for(TableInputContext inputContext : tableInputContexts) {
+		for (TableInputContext inputContext : tableInputContexts) {
 			inputContext.saveDocument(monitor);
 		}
 	}
